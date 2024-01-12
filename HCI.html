@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Team 34 | HCI</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0d1b2a;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="index.html">Team 34 Report Website</a>
+        <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="/images/toggle-column-white.svg" alt="toggle" width="30">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="requirements.html">Requirements</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link text-white active" aria-current="page" style="font-weight: 700;" href="HCI.html">HCI</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="design.html">Design</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="implementation.html">Impl.</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="testing.html">Testing</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="evaluation.html">Evaluation</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="appendices.html">Appendices</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div style="width: 100; background: linear-gradient(to bottom right,#0d1b2a, #778da9); " class="text-center py-5 text-white">
+      <h1>HCI</h1>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center py-4">
+        <div class="col-lg-8 col-md-11 col-sm-12">
+          <div class="py-2">
+            <h3 class="text-center" id="subheading">User Requirements & Design principles</h3>
+            <p>To help us understand the user requirements and design the systems, we conducted numerous interviews with IFRC staff members as well
+              members in underserved communities. This interviews helped us understand the needs of the users as well as the main challenges.
+            </p>
+            <h5 id="subsubheading">Survey design</h5>
+            <p>
+              Based on the interviews, we have identified that users completing the survey prefer the surveys to be short and simple.
+              Furthermore, the user states that the survey should not only be used to extract quantitative data but also used to collect
+              qualitative data, therefore the survey should allow users to give insights and explanations in detail. On the other hand, 
+              according to the IFRC staff, the survey should give results as data that can be visualized in a user-friendly and informative way. 
+              Furthermore, questions in the survey need to be effective and efficient in order to gather the required data such as health-related data 
+              and community demographics. These data points are essential for planning and executing effective response strategies. Finally, the 
+              survey format should prioritise simplicity to accommodate translation into different languages and to cater for user with varying 
+              levels of literacy.
+            </p>
+            <h5 id="subsubheading">Dashboard design</h5>
+            <p>
+              From the responses of the IFRC staff, the dashboard should be able to display the data in a visual and user friendly way. 
+              Furthermore, the dashboard should display the key insights from both quantitative and qualitative data in a clear and concise 
+              matter, making it easy for us to understand and act upon information collected. In the user's point of view, the dashboard should 
+              contain several features such as the ability to share responses to different social medias and the ability to look for opportunities 
+              for volunteer engagement.
+            </p>
+            <h5 id="subsubheading">Main challenges</h5>
+            <p>"We encountered challenges related to the speed of data collection, access to technology in rural areas, and ensuring data security. 
+              With data collection, the survey tool should be simple and accessible to as many groups as possible (should require limited technology), 
+              allowing for rapid data collection, even in remote areas. Additionally it should implement robust data security measures to ensure data 
+              confidentiality and protect individuals." - IFRC response staff</p>
+          </div>
+          <div class="py-2">
+            <h3 class="text-center text-decoration-underline" style="color: #1b263b;">Sketches</h3>
+            <p>After gathering user requirements, we made sketches for the survey and dashboard.</p>
+            <img src="/images/hci/sketches-survey.png" class="mx-auto d-block" alt="sketches-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Survey sketches</p>
+            <img src="/images/hci/sketches-dashboard.png" class="mx-auto d-block" alt="sketches-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Dashboard sketches</p>
+          </div>
+          <div class="py-2">
+            <h3 class="text-center text-decoration-underline" style="color: #1b263b;">Prototype</h3>
+            <p>We then came up with prototypes based on the sketches and users' requiremnts.</p>
+            <p>The survey is done on whatsapp channel. The user will receive a message to complete 
+              the survey. The survey will be done in a conversational way, where whatsapp channel will send the question 
+              and the user will answer the question. Questions allow users to answer in different formats such as text, 
+              multiple choice or even interacting with the questions itself. Furthermore, the survey will have a feature 
+              that allows the user to select languages.
+            </p>
+            <img src="/images/hci/prototype-survey.png" class="mx-auto d-block" alt="prototype-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Survey prototype</p>
+            <p>The dashboard is mainly for the IFRC to view responses from members in different communities. However, users 
+              will also be able to view the dashboard as well. The dashboard's home page will allow users to search for different 
+              communities as well as view the latest news.
+            </p>
+            <img src="/images/hci/prototype-dashboard-home.png" class="mx-auto d-block" alt="prototype-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Dashboard Home Page</p>
+            <p>The dashboard also contains a map in which useres can view the the locations of the different communities' responses. 
+              The users can then click on each community to view the statistics as well as the responses and data collected.
+            </p>
+            <img src="/images/hci/prototype-dashboard-map.png" class="mx-auto d-block" alt="prototype-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Dashboard Map</p>
+            <p>The dashboard response page allows users, especially response staff, to view responses of members in the communities. 
+              The users can also filter and sort the data in different categories such as age and gender as well as changing the languages 
+              of the responses.
+            </p>
+            <img src="/images/hci/prototype-dashboard-responses.png" class="mx-auto d-block" alt="prototype-survey" width="100%">
+            <p class="text-center" style="color: #71797E;">Dashboard Response Page</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="width: 100; background: #0d1b2a;">
+      <div class="container pb-4">
+        <footer class="py-4 d-flex justify-content-center">
+          <div class="text-white">
+            <h5 class="text-center">Team 34 Report Website</h5>
+            <p class="text-center">Created by Pittawas Kijoran</p>
+            <a href="#" class=""><img src="/images/github-mark-white.png" class="mx-auto d-block" alt="GithubLogo" width="30"></a>
+            <br>
+            <p style="font-size: small;">&copy; 2023 - 2024 IFRC, Pittawas Kijoran. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div style="position: fixed; bottom: 20px; right: 20px;">
+      <a href="#" id="to_top_button" style="display: none;"><button type="button" class="btn btn-secondary">Back to top</button></a>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
