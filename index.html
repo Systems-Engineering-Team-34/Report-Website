@@ -1,76 +1,310 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Team 34 Report Website</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0d1b2a;">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="index.html">Team 34 Report Website</a>
-        <button class="navbar-toggler" style="border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="/images/toggle-column-white.svg" alt="toggle" width="30">
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-            <li class="nav-item"><a class="nav-link text-white active" aria-current="page" style="font-weight: 700;" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="requirements.html">Requirements</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="research.html">Research</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="HCI.html">HCI</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="design.html">Design</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="implementation.html">Impl.</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="testing.html">Testing</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="evaluation.html">Evaluation</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="appendices.html">Appendices</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <!-- Content -->
-    <div style="width: 100; background: linear-gradient(to bottom right, #0d1b2a, #415a77); " class="text-center py-5 text-white">
-      <h1>Global Survey Tool</h1>
-      <h3 class="px-2">An online tool for members in communities to interact and share their responses to the IFRC</h3>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RedCrossConnect | Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon/IFRCfavicon.ico" rel="icon">
+  <link href="assets/img/icon/IFRCfavicon.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Scaffold
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">RedCrossConnect</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="/requirements.html">Requirements</a></li>
+          <li><a class="nav-link scrollto" href="/research.html">Research</a></li>
+          <li><a class="nav-link scrollto" href="/HCI.html">HCI</a></li>
+          <li><a class="nav-link scrollto" href="/design.html">Design</a></li>
+          <li><a class="nav-link scrollto" href="/implementation.html">Impl.</a></li>
+          <li><a class="nav-link scrollto" href="/testing.html">Testing</a></li>
+          <li><a class="nav-link scrollto" href="/evaluation.html">Evaluation</a></li>
+          <li><a class="nav-link scrollto" href="/appendices.html">Appendices</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
     </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+
     <div class="container">
-      <div class="row justify-content-center py-4">
-        <div class="col-lg-8 col-md-11 col-sm-12">
-          <div class="py-2">
-            <h3 class="text-center" id="subheading">Abstract</h3>
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+          <div>
+            <h1>RedCrossConnect | Global Survey Tool</h1>
+            <h2>An online tool for members in communities to interact and share their responses to the IFRC</h2>
+            <h2>COMP0016 Team 34 | A project in collaboration with the IFRC</h2>
+            <a href="#about" class="btn-get-started scrollto">EXPLORE</a>
           </div>
-          <div class="py-2">
-            <h3 class="text-center" id="subheading">Project Video</h3>
-          </div>
-          <div class="py-2">
-            <h3 class="text-center" id="subheading">Development Team</h3>
-          </div>
-          <div class="py-2">
-            <h3 class="text-center" id="subheading">Gantt Chart</h3>
-          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+          <img src="assets/img/icon/IFRCLogo.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
 
-    <div style="width: 100; background: #0d1b2a;">
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Abstract Section ======= -->
+    <section id="about" class="about">
       <div class="container">
-        <footer class="py-4 d-flex justify-content-center">
-          <div class="text-white">
-            <h5 class="text-center">Team 34 Report Website</h5>
-            <p class="text-center">Created by Pittawas Kijoran</p>
-            <a href="#" class=""><img src="/images/github-mark-white.png" class="mx-auto d-block" alt="GithubLogo" width="30"></a>
-            <br>
-            <p style="font-size: small;">&copy; 2023 - 2024 IFRC, Pittawas Kijoran. All rights reserved.</p>
+        <h2>Abstract</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <h2>Features</h2>
+
+        <div class="row">
+          <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item" data-aos="fade-up">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  <h4>Survey</h4>
+                  <p>Survey tool via Whatsapp Channels</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  <h4>Dashboard</h4>
+                  <p>Application to view survey results</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  <h4>Response Sharing</h4>
+                  <p>Share survey results to social media through the dashboard</p>
+                </a>
+              </li>
+            </ul>
           </div>
-        </footer>
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src="assets/img/features-1.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src="assets/img/features-3.png" alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Video Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Video</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in">
+              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Pittawas (Poom) Kijoran</h4>
+                <span>Front End</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Nik Anas Amri bin Nik Adnan</h4>
+                <span>Back End</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Samir Adhikari</h4>
+                <span>Back End</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Gantt Chart Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Project Timeline</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+      </div>
+    </section><!-- End Clients Section -->
+
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>RedCrossConnect</h3>
+              <p>
+                COMP0016 Team 34
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-github"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-youtube"></i></a>
+                <a href="https://pittawaskijoran29.wordpress.com" class="wordpress"><i class="bx bxl-wordpress"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/requirements.html">Requirements</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/research.html">Research</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/HCI.html">HCI</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/design.html">Design</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4></h4>
+            <br>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/implementation.html">Implementation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/testing.html">Testing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/evaluation.html">Evaluation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/appendices.html">Appendices</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Project Partners</h4>
+            <a href="https://www.ucl.ac.uk/">
+              <img src="assets/img/icon/UCLLogo.png" alt="UCLLogo" width="50%">
+            </a>
+            <a href="https://www.ifrc.org/">
+              <img src="assets/img/icon/IFRCLogo.png" alt="RedCrossLogo" width="40%">
+            </a>
+          </div>
+
+        </div>
       </div>
     </div>
-    <div style="position: fixed; bottom: 20px; right: 20px;">
-      <a href="#" id="to_top_button" style="display: none;"><button type="button" class="btn btn-secondary">Back to top</button></a>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright . All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
