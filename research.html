@@ -126,30 +126,141 @@
           <div class="col-lg-12" data-aos="fade-up">
             <ul class="nav nav-tabs justify-content-center" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#tab-framework">Frameworks</a>
+                <a class="nav-link active" data-bs-toggle="tab" href="#tab-survey-tool">Survey Tool</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-languages">Languages</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-front-end">Front End</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-libraries">Libraries</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-API">APIs</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-back-end">Back End</a>
               </li>
             </ul>
             <div class="tab-content">
-              <div id="tab-framework" class="container tab-pane active"><br>
-                <h4>Frameworks</h4>
+              <div id="tab-survey-tool" class="container tab-pane active"><br>
+                <h4 class="text-decoration-underline">Survey Tool</h4>
+                <div class="text-container">
+                  <h5 class="text-decoration-underline">Technology</h5>
+                  <p>
+                    Our development started with researching through the different tools we could use to create the survey system. A 
+                    clear choice was suggested by our partners which was Twilio. Twilio [1] is a customer engagement platform used by over 
+                    300,00 global enterprises to help build unique, personalized experiences for their customers. Twilio offers numerous 
+                    benefits and unique advantages such as:
+                  </p>
+                  <ul>
+                    <li>Wide Range of Communication Features: Twilio provides a compregensive suite of communication APIs, including 
+                      text, chat, in particualy integration of programs such as WhatsApp.</li>
+                    <li>Global Reach: Twilio's worldwide messaging capabilities make it an ideal choice for our project, which is 
+                      designed to operate on a global scale.</li>
+                    <li>Scalability: Twilio's cloud-based infrastructure is designed to scale effortlessly with our application's needs,
+                      allowing from a few messages per day to millions, ensuring reliable performance during peak usages.</li>
+                    <li>Security Features: Twilio prioritises security, offering features like end-to-end encryption, authentication, 
+                      and secure handling of sensitive data, ensuring that our users' information is protected.</li>
+                  </ul>
+                  <p>These benefits makes it clear that Twilio is the perfect match for our project and will integrate into our system 
+                    very efficiently.</p>
+                  <h5 class="text-decoration-underline">WhatsApp</h5>
+                  <p>With Twilio, it offers many different platforms it can integrate with such as WhatsApp and SMS. However, we have 
+                    decided to use WhatsApp as our main platform for the survey tool. Here are some key benefits of using WhatsApp with 
+                    Twilio [2]:</p>
+                  <ul>
+                    <li>Higher Engagement Rates: WhatsApp boasts over 2 billion users worldwide, with high engagement rates in many 
+                      countries. This widespread adoption can lead to better engagement and response rates compared to SMS.</li>
+                    <li>Cost-Effectiveness: WhatsApp can be more cost-effective, especially for international messaging. While SMS may 
+                      incur varying charges based on carrier rates and international fees, WhatsApp messages use the recipient's data 
+                      plan, potentially reducing costs for both sender and recipient.</li>
+                    <li>Security: WhatsApp offers end-to-end encryption for all its messages, ensuring a higher level of security and 
+                      privacy for sensitive communications.</li>
+                    <li>Global Accessibility: WhatsApp is accessible on both smartphones and through web applications, ensuring users 
+                      can receive and engage with messages even on desktop devices.</li>
+                  </ul>
+                  <p>Choosing WhatsApp for communication within a Twilio-powered project can enhance user engagement, provide richer 
+                    communication experiences, and offer cost and security advantages, making it a compelling option for global 
+                    projects, such as our project.</p>
+                  <h5 class="text-decoration-underline">Language</h5>
+                  <p>
+                    Twilio offers a tool called Twilio Studio [3], which users can visually construct the flow of the survey, defining how users 
+                    interact with the bot via WhatsApp, how the bot responds to various inputs, and how it manages the conversation's progression. 
+                    This tool has many advantages such as the ease of use as well as the ability to create complex flows with minimal coding.
+                  </p>
+                  <p>
+                    However, despite the convenience and intuitiveness of Twilio Studio, we chose to develop our survey bot using 
+                    Python due to its powerful programming capabilities and seamless integration with our Django backend. Python's 
+                    extensive libraries and Django's robust framework provide the flexibility needed to build a more customized and 
+                    integrated survey solution, essential for our project's requirements. This approach allows for more sophisticated 
+                    data handling, analysis, and integration with our system's other components, offering a deeper level of 
+                    customization and control over the survey process.
+                  </p>
+
+                </div>
               </div>
-              <div id="tab-languages" class="container tab-pane fade"><br>
-                <h4>Languages</h4>
+              <div id="tab-front-end" class="container tab-pane"><br>
+                <h4 class="text-decoration-underline">Front End</h4>
+                <div class="text-container">
+                  <h5 class="text-decoration-underline">React</h5>
+                  <p>When selecting the front-end technology for our project, we considered various frameworks and libraries before 
+                    ultimately choosing React [4]. Here's an overview of the alternatives and why React stood out as the best choice:</p>
+                  <p>Alternatives to React:</p>
+                  <ul>
+                    <li>Angular: Angular is a comprehensive front-end framework that offers a wide range of features and tools for 
+                      building complex web applications. However, there is a steep learning curve.</li>
+                    <li>Vue.js: Vue.js is a lightweight and flexible front-end framework that provides a simple and intuitive 
+                      development experience. While Vue.js is beginner-friendly, it might lack the scalability needed for more complex applications.</li>
+                  </ul>
+                  <p>Why React? [5]</p>
+                  <p>React's component-based architecture allows for the development of reusable UI components, promoting efficient 
+                    code management and scalability. Its vast ecosystem provides a wealth of resources and libraries, making it an 
+                    ideal choice for complex applications like ours. Furthermore, React's efficiency in rendering and updating the DOM 
+                    ensures a smooth and responsive user experience, crucial for the interactive elements of our dashboard.</p>
+                  <h5 class="text-decoration-underline">Language</h5>
+                  <p>For our project, we opted to use TypeScript over JavaScript. TypeScript offers several advantages in a React environment [6]:</p>
+                  <ul>
+                    <li>Type Safety: TypeScript is a typed superset of JavaScript, which introduces static typing. It helps catch 
+                      type-related errors during development, resulting in more reliable and maintainable code.</li>
+                    <li>Scalability: For more complex projects, TypeScript's static typing can help prevent certain bugs and simplify 
+                      refactoring code. It provides better code organization and documentation through interfaces, type annotations, 
+                      and generics.</li>
+                    <li>Performance: There is a faster performance with TypeScript when React is used with it as it is a type system. 
+                      Typescript has static typing that helps the compiler make sure that the code is correct. On the other hand, in 
+                      JavaScript, no errors are detected by the compiler because it’s dynamically typed. Moreover, Typescript has its own 
+                      virtual DOM, which produces a faster UI, but JavaScript does not have its own virtual DOM. </li>
+                  </ul>
+                  <h5 class="text-decoration-underline">React Packages</h5>
+                  <p>1. ApexCharts: We integrated ApexCharts with React to create dynamic and interactive charts and graphs. 
+                    ApexCharts offers a wide range of chart types and is highly customizable, making it perfect for visualizing the 
+                    diverse data collected from our surveys.</p>
+                  <p>2. React Simple Maps: To implement the geographical selection of countries, we used React Simple Maps. This 
+                    package simplifies the creation of SVG maps in React applications, offering interactivity and customization 
+                    options like zooming and centering, ideal for our needs in representing global data.</p>
+                  <p>By leveraging React's robust ecosystem and combining it with TypeScript's benefits, we've built a front-end that 
+                    is not only scalable and maintainable but also provides an engaging user experience through interactive charts and 
+                    maps.</p>
+                </div>
               </div>
-              <div id="tab-libraries" class="container tab-pane fade"><br>
-                <h4>Libraries</h4>
-              </div>
-              <div id="tab-API" class="container tab-pane fade"><br>
-                <h4>APIs</h4>
+              <div id="tab-back-end" class="container tab-pane"><br>
+                <h4 class="text-decoration-underline">Back End</h4>
+                <div class="text-container">
+                  <h5 class="text-decoration-underline">Django, Python</h5>
+                  <p>For the backend of our project, we chose Django [7] alongside Python, a combination renowned for its robustness and 
+                    efficiency in web development. Django, a high-level Python web framework, facilitates rapid development and clean 
+                    design, making it ideal for our needs, which include managing the interaction between Twilio and our database, as 
+                    well as connecting the database to the frontend. While alternatives like Flask and Express.js were considered for 
+                    their simplicity and flexibility, Django's comprehensive features as well as its versatility ultimately provided 
+                    the most cohesive solution for our project's complexity.</p>
+                  <h5 class="text-decoration-underline">Database</h5>
+                  <p>We selected MySQL as our database [8] of choice, valuing its reputation for reliability, robust performance, and 
+                    user-friendliness. These attributes perfectly meet our project's demands for managing structured data and 
+                    executing sophisticated queries. While the schema-less nature and adaptability of MongoDB, a NoSQL database, 
+                    initially caught our attention for storing survey responses, the necessity for intricate queries and the 
+                    preservation of data relationships guided us towards a unified MySQL solution. This ensures that all our data 
+                    reside within a single, cohesive database environment, allowing for more intricate data analysis and integrity.</p>
+                  <h5 class="text-decoration-underline">Hosting Service</h5>
+                  <p>For hosting our backend and APIs, we chose Microsoft Azure [9] for its robust services and infrastructure, ideal for 
+                    our project's needs including reliability and scalability. While we considered Amazon Web Services (AWS) for its 
+                    scalability and Google Cloud Platform (GCP) for its analytics and integration, Azure's compatibility with our 
+                    technology stack, strong security measures, and seamless integration with Microsoft tools made it the preferred 
+                    choice. Azure's comprehensive support ensures smooth deployment and operation of our Django-based backend, 
+                    making it the optimal hosting environment for our project.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -195,6 +306,21 @@
             </tbody>
           </table>
         </p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="text-container">
+        <p>References:</p>
+        <p>[1] Twilio, “What is Twilio? An introduction to the leading customer engagement platform | Twilio,” www.twilio.com. Available: https://www.twilio.com/en-us/resource-center/what-is-twilio-an-introduction-to-the-leading-customer-engagement-platform</p>
+        <p>[2] C. Brouwers, “WhatsApp vs SMS: Which One is Suitable for You?,” CM.com, Nov. 30, 2023. Available: https://www.cm.com/blog/sms-vs-whatsapp-a-comparison-from-a-business-perspective/#:~:text=in%20a%20Nutshell-</p>
+        <p>[3] Twilio, “Studio application builder | Twilio | www.twilio.com,” www.twilio.com. Available: https://www.twilio.com/en-us/serverless/studio</p>
+        <p>[4] Meta Open Source, “React,” react.dev, 2024. Available: https://react.dev/</p>
+        <p>[5] D. Jadhav, “Why choose React for frontend?,” DEV Community, Oct. 23, 2021. Available: https://dev.to/digvijayjadhav98/why-choose-react-for-frontend-4m23</p>
+        <p>[6] N. Bhati, “React with TypeScript or JavaScript: Which is Better?,” Tech Blog | Mobile App, eCommerce, Salesforce Insights, Nov. 20, 2023. Available: https://www.emizentech.com/blog/react-with-typescript-or-javascript.html#:~:text=There%20is%20a%20faster%20performance</p>
+        <p>[7] Sunscrapers Team, “Pros and cons of using Django for web development,” Sunscrapers, Jan. 30, 2023. Available: https://sunscrapers.com/blog/pros-and-cons-of-using-django-for-web-development/</p>
+        <p>[8] B. Anderson and B. Nicholson, “SQL vs. NoSQL Databases: What’s the Difference?,” IBM Blog, Jun. 12, 2022. Available: https://www.ibm.com/blog/sql-vs-nosql/</p>
+        <p>[9] Microsoft, “What is Azure—Microsoft Cloud Services | Microsoft Azure,” azure.microsoft.com. Available: https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-azure</p>
       </div>
       <br>
     </div>
