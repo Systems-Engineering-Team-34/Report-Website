@@ -40,6 +40,10 @@ h6 {
   text-align: center;
 }
 
+.text-container {
+  text-align: left;
+}
+
 @media (max-width: 1000px) {
   .custom-container {
     padding-right: 15px;
