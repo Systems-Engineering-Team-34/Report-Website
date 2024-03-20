@@ -87,7 +87,7 @@
       <br>
       <div id="implementation-front-end">
         <h2 class="text-decoration-underline">Front-end Implementation</h2>
-        <h4 class="text-decoration-underline text-container">Pages</h4>
+        <h4 class="text-decoration-underline text-container">Pages and Routing</h4>
         <p class="text-container">
           With the dashboard, there is a need to create multiple pages and therefore needs routing. This includes pages for the home 
           page, select country page, country info page and the region / community response page. To create the different routing options, 
@@ -95,10 +95,69 @@
           we were able to allow for parameters to be passed through the URL. This was important as we needed to pass variables such as the 
           country code or community id to retrieve the correct data.
         </p>
-        <img src="assets/img/implementation/frontend/react-code-app-route.png" alt="Pages" width="60%" class="pb-4">
+        <img src="assets/img/implementation/frontend/react-code-app-route.png" alt="Pages" width="55%" class="pb-2">
+        <p class="text-container">
+          The code above shows the different routes that we have created. The <code>BrowserRouter</code> component is used to wrap the 
+          different routes. The <code>Route</code> component is then used to create the different routes. The <code>element</code> attribute is used to specify the 
+          component that should be rendered when the route is matched. The <code>:countryCode</code> and <code>:communityID</code> are used to specify a parameter that can be 
+          passed through the URL. This parameter can then be accessed in the component using the <code>useParams()</code> hook.
+        </p>
+        <p class="text-container">
+          In terms of creating the content of each page and components, we used regular react conventions and hooks such as <code>useState</code> and 
+          <code>useEffect</code> etc. Furthermore, for styling the components, we primarily used <code>TailwindCSS</code> as it was easy to utilise.
+        </p>
         <h4 class="text-decoration-underline text-container">Interfaces / Types</h4>
+        <p class="text-container">
+          Using Typescript for react means that there needs to be ways to deal with the different types and interfaces. In our project, 
+          we created many different <code>interfaces</code> to store the different types for different object such as communityInfo (pictured below), 
+          countryInfo etc. This was important as it allowed us to easily pass and store the correct data to the correct components, reducing the 
+          chances of errors due to typing.
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-interfaces.png" alt="Interfaces" width="25%" class="pb-2">
         <h4 class="text-decoration-underline text-container">Map</h4>
+        <p class="text-container">
+          For the map component, we utilised the <code>react-simple-map</code> package. This package was very useful as it had many usable 
+          attributes such as <code>ZoomableGroup</code> and <code>Marker</code>. Furthermore, we also had to use a <code>geojson</code> file that 
+          contained the coordinates for the different counties, allowing us to display the world map as well as mark the different zones. Moreover,
+          to allow the map to be interactive and zoomable, we had to use the <code>ZoomableGroup</code> component as well as <code>useStates</code> to store the 
+          current zoom level and position of the map, allowing us to create functions to handle the user zooming in and out as well as panning 
+          the map.
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-map-1.png" alt="Map" width="55%" class="pb-2">
+        <p class="text-container">
+          Other than displaying the map, we also had to find a way to display and mark all the countries with availble responses. With 
+          <code>react-simple-maps</code>, we were able to use the <code>Marker</code> component to mark the different countries using
+          coordinates, data which is already stored in our database. We also had to ensure that the markers were clickable and would 
+          redirect the user to the correct country page. This was done by using the <code>Link</code> component, allowing for the page to route 
+          to the correct page along with the correct parameter.
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-map-2.png" alt="Map" width="50%" class="pb-2">
         <h4 class="text-decoration-underline text-container">Charts</h4>
+        <p class="text-container">
+          One of the main features of the dashboard is the ability to display the data in a visual manner. To do this, we used the <code>react-apexcharts</code> 
+          package to create the different charts such as a pie chart and bar chart in a user-friendly way. The package allowed us to 
+          customise the chart styles such as changing the colours and labels.
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-pie-chart.png" alt="Chart" width="60%" class="pb-2">
+        <h4 class="text-decoration-underline text-container">Social Media and Share Feature</h4>
+        <p class="text-container">
+          To create the functionality to share the response results to social media, we primarily wrote functions that redirects the user 
+          to the social media platform page which automatically fills in the text and link. This was done by using the <code>window.open()</code> and 
+          setting the url to the current url of the dashboard page (<code>const url = encodeURIComponent(window.location.href);</code>). Below is 
+          the code for all the social media share functions: 
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-share-social.png" alt="Social Media" width="90%" class="pb-2">
+        <p class="text-container">
+          Furthermore, to allow the user to also be able to download the chart as an image, we used the <code>html2canvas</code> package to allow 
+          us to render the chart as an image. This is done through the <code>openModalWithImage</code> function. 
+          The <code>downloadImage</code> function then creates a temporary link element in the document, setting its <code>href</code> 
+          attribute to the data URL of the image that was previously captured and stored in <code>imageDataUrl</code>. This URL 
+          represents the image of the chart intended for download. The function then sets the <code>download</code> attribute of the link 
+          with a custom file name. After appending this link to the document body, the function programmatically clicks the link to initiate the 
+          download, and then removes the link from the document, completing the image download process without navigating away from the 
+          current page.
+        </p>
+        <img src="assets/img/implementation/frontend/react-code-download-image.png" alt="Download Image" width="80%" class="pb-2">
       </div>
       <br>
       <div id="implementation-back-end">
