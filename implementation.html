@@ -80,9 +80,84 @@
 
     <div class="custom-container">
       <div id="implementation-survey-tool">
-        <h2 class="text-decoration-underline">Survey Tool Implementation</h2>
-        <h4 class="text-decoration-underline text-container">Survey Bot</h4>
-        <h4 class="text-decoration-underline text-container">Model</h4>
+        <h2 class="text-decoration-underline">Survey Bot Implementation</h2>
+        <h4 class="text-decoration-underline text-container">Key Libraries and Frameworks Used:</h4>
+        <ol type="1" class="text-container">
+          <li>Django: A high-level Python Web framework that encourages rapid development and clean, pragmatic design. Used here to create web views and interact with the database via models.</li>
+          <li>Twilio API for WhatsApp: Used to send and receive messages between the bot and users on WhatsApp. The <code>Client</code> from <code>twilio.rest</code> enables sending messages, managing responses, and handling user sessions.</li>
+          <li>PyCountry: Utilized for country validation and manipulation. This helps in processing user inputs for country-related questions.</li>
+          <li>FuzzyWuzzy: A library that uses Levenshtein Distance to calculate the differences between sequences. This is particularly useful for matching user input to cities, providing a form of error tolerance.</li>
+          <li>allcities : This library assists in managing the city data together used with the FuzzyWuzzy libraries to match the user input with a known list of cities accurately.</li>
+        </ol>
+        <h4 class="text-decoration-underline text-container">Flow and Key Features</h4>
+        <p class="text-container">
+          1. User Interaction Handling: The <code>bot</code> view function is the core of the survey bot, designed to handle <code>POST</code> 
+          requests from Twilio's webhook configured for the WhatsApp number. It processes messages received from users, determines the 
+          current stage of the user interaction, and dispatches control to the appropriate handler functions based on the user's 
+          current state and input.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-bot-user-interaction-handling.png" alt="Survey Bot Flow" width="50%" class="pb-2">
+        <p class="text-container">
+          2. State Management: The <code>UserState</code> model keeps track of each user's current interaction stage, which guides the 
+          bot on which question to ask next or what action to perform. This state-driven logic enables the bot to handle complex 
+          interactions, including survey participation, personal detail updates, and navigation through different options. The code 
+          snippet demonstrates how the <code>UserState</code> model manages the flow of interactions by checking the user's current 
+          stage and then invoking different functions to handle the user’s progression through the survey bot’s features.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-bot-state-management.png" alt="Survey Bot State Management" width="55%" class="pb-2">
+        <p class="text-container">
+          3. Message Sending and Receiving: Utilizes Twilio's <code>Client</code> to send messages to users and receive responses. 
+          This includes sending questions, options for users to select, and handling custom messages like welcoming new users or 
+          thanking them after completing surveys. The example from the code snippet shows <code>send_gender_message</code> 
+          demonstrates sending a gender query message with <code>1</code> is the text message and <code>2</code> to <code>4</code> 
+          representing buttons options for user responses.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-bot-message-send-and-receive.png" alt="Survey Bot Message Sending and Receiving" width="55%" class="pb-2">
+        <p class="text-container">
+          4. Dynamic Survey Handling: The bot dynamically handles surveys and questions from the database. Surveys and their 
+          corresponding questions are stored in models and fetched as needed, allowing for a flexible survey system that can be 
+          expanded or modified without changing the bot's codebase. In the provided code snippet, the function 
+          <code>handle_survey_response</code> deals with user answers within a survey. It first attempts to save a user's response 
+          with <code>save_survey_response</code> and, based on whether the save was successful, either retrieves the next question 
+          using <code>get_next_survey_question</code> or concludes the survey if there are no more questions. This approach ensures 
+          that the survey bot responds adaptively, presenting subsequent questions in a sequence or closing the interaction gracefully 
+          once the user has completed the survey.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-bot-handle-survey-response.png" alt="Survey Bot Dynamic Survey Handling" width="55%" class="pb-2">
+        <p class="text-container">
+          5. Personalization and Localization: By leveraging user information and inputs (e.g., country and city from user responses), 
+          the bot can offer a more personalized experience. This is further enhanced with the use of <code>PyCountry</code> for country 
+          validation and <code>FuzzyWuzzy</code> and <code>allcities</code> both used for flexible city matching, adding a layer of 
+          user-friendly interaction by tolerating minor typos or variations in user inputs.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-bot-city-country-checker.png" alt="Survey Bot Personalization and Localization" width="55%" class="pb-2">
+        <h4 class="text-decoration-underline text-container">Models Implementation</h4>
+        <p class="text-container">The models define the structure of the database used by the survey bot for storing surveys, questions, user states, and other necessary information:</p>
+        <p class="text-container">
+          1. Survey-related Models: <code>Survey</code>, <code>SurveyQuestion</code>, and <code>QuestionOption</code> models store 
+          information about each survey, the questions within those surveys, and the options for each question, respectively. This 
+          structure supports creating surveys with multiple-choice questions, where each question can have multiple predefined answers.
+        </p>
+        <img src="assets/img/implementation/surveytool/survey-question-model.png" alt="Survey Bot Survey-related Models" width="65%" class="pb-2">
+        <p class="text-container">
+          2. User Information Models: <code>Person</code>, <code>UserState</code>, and <code>Community</code> models track 
+          user-specific information. <code>Person</code> stores basic user details, <code>UserState</code> keeps track of where the 
+          user is in the survey or bot interaction, and <code>Community</code> used to store the information of the city in the 
+          country to be displayed on the dashboard.
+        </p>
+        <img src="assets/img/implementation/surveytool/person-model.png" alt="Survey Bot User Information Models" width="63%" class="pb-2">
+        <p class="text-container">
+          3. Response Model: The <code>Response</code> model captures users' answers to survey questions, linking each response to the 
+          specific user and survey question.
+        </p>
+        <img src="assets/img/implementation/surveytool/response-model.png" alt="Survey Bot Response Model" width="63%" class="pb-2">
+        <h4 class="text-decoration-underline text-container">Database Connection:</h4>
+        <p class="text-container">
+          Django's ORM (Object-Relational Mapping) is utilized for database interactions. This abstracts the database layer, allowing 
+          developers to interact with the database using Python code instead of SQL. The `models.py` file contains the schema 
+          definitions for each table in the database, and Django automatically generates the necessary SQL commands for all CRUD 
+          (Create, Read, Update, Delete) operations.
+        </p>
       </div>
       <br>
       <div id="implementation-front-end">
