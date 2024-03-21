@@ -530,7 +530,7 @@ section {
 # Features
 --------------------------------------------------------------*/
 .features {
-  padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 
 .features .nav-tabs {
@@ -539,7 +539,7 @@ section {
 
 .features .nav-link {
   border: 0;
-  padding: 20px;
+  padding: 6px;
   transition: 0.3s;
   color: #364146;
   transition: 0.3s ease-in-out;
