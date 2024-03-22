@@ -49,7 +49,7 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
-            <li class="list"><a href="index.html" class="active"><span>Home</span></a></li>
+            <li class="list"><a href="index.html"><span>Home</span></a></li>
             <li class="dropdown"><a href="requirements.html"><span>Requirements</span></a>
               <ul>
                 <li><a href="requirements.html#requirements-partner-intro">Client Introduction</a></li>
@@ -84,7 +84,7 @@
                 <li><a href="design.html#design-data-storage">Data Storage</a></li>
               </ul>
             </li>
-            <li class="dropdown"><a href="implementation.html"><span>Impl.</span></a>
+            <li class="dropdown"><a href="implementation.html" class="active"><span>Impl.</span></a>
               <ul>
                 <li><a href="implementation.html#implementation-survey-tool">Survey Bot Impl.</a></li>
                 <li><a href="implementation.html#implementation-front-end">Frontend Impl.</a></li>
@@ -300,6 +300,7 @@
           establish relationships. This approach ensures atomicity of data and minimizes redundancy, supporting efficient data 
           management and maintenance.
         </p>
+        <img src="assets/img/implementation/backend/database-normalisation.png" alt="Database Schema" width="60%" class="pb-2">
         <p class="text-container">
           Additionally, we utilized appropriate data types and constraints to enforce data consistency and integrity across the 
           database. Foreign key constraints, for example, were employed to establish and maintain relationships between tables, 
@@ -310,28 +311,35 @@
           In our project, the server-side API plays a critical role in mediating the interaction between the client-side application 
           and the backend systems. These APIs are designed to handle a range of requests from clients, perform the required operations 
           and then return the necessary data or results back to the client. This architecture ensures a smooth and efficient data 
-          flow, enabling a responsive user experience.
+          flow, enabling a responsive user experience. We developed the API using Django, a powerful python web framework. Django's 
+          ORM streamlined our development process by enabling us to effortlessly query the database using Python code, thus avoiding 
+          the need for complex SQL syntax.
         </p>
         <h5 class="text-container text-decoration-underline">Key endpoints and their operations:</h5>
         <p class="text-container">
-          <code>/community/&lt;int:communityid&gt;/</code>: Fetches data about the community itself things like number of respondents 
-          in the community, the country the community is located in etc… Also fetches data about the responses made by the respondents 
-          of that community.
+          <code>/community/&lt;int:communityid&gt;/</code>: Fetches and returns data about the specific community. This includes data 
+          about the community itself, so the country the community is located in, the number of respondents etc… As well as 
+          information about the responses made by the members of that specific community.
         </p>
         <p class="text-container">
           <code>/communities/</code>: Retrieves every registered community, as well as information about that community again this 
-          would be things like the number of respondents, the country the community is located in etc…
+          would be things like the number of respondents, the country the community is located in etc… 
+          <br>
+          Below is an example of how the function for requesting community info is made.
+        </p>
+        <img src="assets/img/implementation/backend/api-get-community.png" alt="API Endpoint" width="65%" class="pb-2">
+        <p class="text-container">
+          <code>/countries/</code>: Fetches and returns information regarding each registered country. For example, things like the 
+          number of registered communities in that country, the country code etc…
         </p>
         <p class="text-container">
-          <code>/countries/</code>: Retrieves all the countries from which there are respondents, as well as information about that 
-          country like the number of registered communities in that country. 
+          <code>/surveys/</code>: Fetches and returns complete information regarding user responses. This includes things like the 
+          number of completed surveys, number of countries from which there are respondents, age/gender makeup of the respondents etc…
         </p>
         <p class="text-container">
-          <code>/surveys/</code>: Retrieves overall information like the total number of completed surveys, number of countries from 
-          which there are respondents, age distribution of the respondents.
-        </p>
-        <p class="text-container">
-          <code>country/&lt;str:countrycode&gt;/</code>: Fetches data about the country itself things like the number of communities located in that country etc… Also fetches data about the responses made by the respondents of those communities located in the specific country.
+          <code>country/&lt;str:countrycode&gt;/</code>: Fetches and returns information regarding each registered country. This not 
+          only contains information about the specific country (country code, number of registered communities located in that country) 
+          but also contains information regarding the responses made by users from communities located in that country. 
         </p>
         <h4 class="text-decoration-underline text-container">Hosting</h4>
         <p class="text-container">

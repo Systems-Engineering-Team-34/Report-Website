@@ -48,7 +48,7 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li class="list"><a href="index.html" class="active"><span>Home</span></a></li>
+          <li class="list"><a href="index.html"><span>Home</span></a></li>
           <li class="dropdown"><a href="requirements.html"><span>Requirements</span></a>
             <ul>
               <li><a href="requirements.html#requirements-partner-intro">Client Introduction</a></li>
@@ -90,7 +90,7 @@
               <li><a href="implementation.html#implementation-back-end">Backend Impl.</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="testing.html"><span>Testing</span></a>
+          <li class="dropdown"><a href="testing.html" class="active"><span>Testing</span></a>
             <ul>
               <li><a href="testing.html#testing-strategy">Testing Strategy</a></li>
               <li><a href="testing.html#testing-automated">Automated Testing</a></li>
@@ -150,6 +150,32 @@
       <br>
       <div id="testing-automated">
         <h2 class="text-decoration-underline">Automated Testing</h2>
+        <p class="text-container">
+          Automated testing is a method that employs scripts to test software systematically, ensuring its reliability. Specifically, 
+          we applied automated testing to evaluate our survey tool, verifying the accurate recognition of inputs and errors, along 
+          with other aspects like the user interface and the questionnaire completion process.
+        </p>
+        <h5 class="text-decoration-underline text-container">Unit Testing</h5>
+        <p class="text-container">
+          Unit testing is a method of testing that tests individual units or components of the software. This allows us to test the software 
+          in a systematic way and to ensure that the software is reliable. In our case, we used unit testing to test the survey tool and check 
+          whether the inputs and errors are recognised as well as other factors such as the user interface and the process of answering questions. 
+          We used the <code>unittest</code> library in Python to perform unit testing.
+        </p>
+        <p class="text-container">Here is a link to the report pdf for the unit testing results: <a href="https://drive.google.com/file/d/1eiqS94iABGJiz9lfiiysSv4vB3n_LTJp/view" target="_blank">Unit Testing Report</a></p>
+        <h5 class="text-decoration-underline text-container">Integration Testing</h5>
+        <p class="text-container">
+          Integration testing, on the other hand, focuses on the coverage testing of combined components within the software, ensuring 
+          that they function together as intended. This step is crucial for verifying the seamless integration and interaction between 
+          different modules, particularly in complex systems like our survey tool. By testing combined parts, we aim to identify and 
+          resolve any discrepancies, mismatches, or failures that might occur when individual units are integrated. For integration 
+          testing, we also leveraged the unittest library in Python, emphasizing the cohesive operation of interconnected components 
+          rather than their isolated functionality.
+        </p>
+        <p class="text-container">
+          We then performed a test coverage analysis to evaluate the effectiveness of our testing. Here are the results:
+        </p>
+        <img src="assets/img/testing/automate/coverage-report.png" class="img-fluid" alt="coverage" width="50%">
       </div>
       <br>
       <div id="testing-uat">
@@ -289,8 +315,8 @@
               <td class="text-container">Dashboard: Upon selecting a country / community, it displays the correct information on the page</td>
               <td class="vertical-border">0</td>
               <td class="vertical-border">0</td>
-              <td class="vertical-border">1</td>
               <td class="vertical-border">0</td>
+              <td class="vertical-border">1</td>
               <td class="vertical-border">3</td>
               <td class="text-container">+ Mostly shows the correct demographic information.</td>
             </tr>
@@ -324,11 +350,11 @@
             <tr>
               <td class="text-container">System is reliable in terms of data flow and performance</td>
               <td class="vertical-border">0</td>
-              <td class="vertical-border">1</td>
-              <td class="vertical-border">1</td>
-              <td class="vertical-border">2</td>
               <td class="vertical-border">0</td>
-              <td class="text-container">- Sometimes the data is not able to be displayed. Probably due to the connection between the database and the dashboard.</td>
+              <td class="vertical-border">0</td>
+              <td class="vertical-border">1</td>
+              <td class="vertical-border">3</td>
+              <td class="text-container">+ Most of the time, the reliability of the dashboard is good.</td>
             </tr>
             <tr>
               <td class="text-container">Rapid data collection. Time for data to travel between survey and dashboard is minimal</td>
