@@ -48,15 +48,65 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto" href="/index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="/requirements.html">Requirements</a></li>
-          <li><a class="nav-link scrollto" href="/research.html">Research</a></li>
-          <li><a class="nav-link scrollto" href="/UIdesign.html">UI Design</a></li>
-          <li><a class="nav-link scrollto" href="/design.html">System Design</a></li>
-          <li><a class="nav-link scrollto" href="/implementation.html">Impl.</a></li>
-          <li><a class="nav-link scrollto active" href="/testing.html">Testing</a></li>
-          <li><a class="nav-link scrollto" href="/evaluation.html">Evaluation</a></li>
-          <li><a class="nav-link scrollto" href="/appendices.html">Appendices</a></li>
+          <li class="list"><a href="index.html" class="active"><span>Home</span></a></li>
+          <li class="dropdown"><a href="requirements.html"><span>Requirements</span></a>
+            <ul>
+              <li><a href="requirements.html#requirements-partner-intro">Client Introduction</a></li>
+              <li><a href="requirements.html#requirements-project-background">Project Background</a></li>
+              <li><a href="requirements.html#requirements-project-goals">Project Goals</a></li>
+              <li><a href="requirements.html#requirements-gathering">Requirements Gathering</a></li>
+              <li><a href="requirements.html#requirements-personas">Personas</a></li>
+              <li><a href="requirements.html#requirements-use-cases">Use Case</a></li>
+              <li><a href="requirements.html#requirements-moscow-list">MoSCoW List</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="research.html"><span>Research</span></a>
+            <ul>
+              <li><a href="research.html#research-project">Project Research</a></li>
+              <li><a href="research.html#research-technology">Technology Research</a></li>
+              <li><a href="research.html#research-technical-decisions">Technical Decisions</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="UIdesign.html"><span>UI Design</span></a>
+            <ul>
+              <li><a href="UIdesign.html#UIDesign-requirements">Design Requirements</a></li>
+              <li><a href="UIdesign.html#UIDesign-design-principles">Design Principles</a></li>
+              <li><a href="UIdesign.html#UIDesign-Sketches">Sketches</a></li>
+              <li><a href="UIdesign.html#UIDesign-Prototype">Prototypes</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="design.html"><span>System Design</span></a>
+            <ul>
+              <li><a href="design.html#design-system-architecture">System Architecture</a></li>
+              <li><a href="design.html#design-survey-bot-flow">Survey Bot Flow</a></li>
+              <li><a href="design.html#design-site-map">Site Map</a></li>
+              <li><a href="design.html#design-data-storage">Data Storage</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="implementation.html"><span>Impl.</span></a>
+            <ul>
+              <li><a href="implementation.html#implementation-survey-tool">Survey Bot Impl.</a></li>
+              <li><a href="implementation.html#implementation-front-end">Frontend Impl.</a></li>
+              <li><a href="implementation.html#implementation-back-end">Backend Impl.</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="testing.html"><span>Testing</span></a>
+            <ul>
+              <li><a href="testing.html#testing-strategy">Testing Strategy</a></li>
+              <li><a href="testing.html#testing-automated">Automated Testing</a></li>
+              <li><a href="testing.html#testing-uat">User Acceptance Testing</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="evaluation.html"><span>Evaluation</span></a>
+            <ul>
+              <li><a href="evaluation.html#evaluation-achievement-list">Achievement List</a></li>
+              <li><a href="evaluation.html#evaluation-bug-list">Bug List</a></li>
+              <li><a href="evaluation.html#evaluation-individual-contribution">Individual Contribution</a></li>
+              <li><a href="evaluation.html#evaluation-critical-evaluation">Critical Evaluation</a></li>
+              <li><a href="evaluation.html#evaluation-future-work">Future Work</a></li>
+            </ul>
+          </li>
+          <li class="list"><a href="appendices.html"><span>Appendices</span></a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
@@ -79,11 +129,34 @@
   <main id="main">
 
     <div class="custom-container">
+      <div id="testing-strategy">
+        <h2 class="text-decoration-underline">Testing Strategy</h2>
+        <p class="text-container">
+          Testing is an essential part of the software development process. With it being a client based project, it is important to 
+          ensure that the software is reliable and all the functionalities and requirements are working as intended. To ensure this, we 
+          had to think of a testing strategy that would allow us to test the software in a systematic way.
+        </p>
+        <p class="text-container">
+          Our first method is used to test whether our survey tool works as intended. This includes checking whether inputs and errors are 
+          recognised (due to human errors) as well as other factors such as the user interface and the process of answering questions. To 
+          do that we performed unit tests and integration testing.
+        </p>
+        <p class="text-container">
+          Our second method of testing is to the test the UI as well as the user experience of both the survey tool and the dashboard. We 
+          chose to utilise the UAT strategy as it allows us to see whether the requirements we set were met as well as gaining feedback for 
+          potential areas of improvement.
+        </p>
+      </div>
+      <br>
+      <div id="testing-automated">
+        <h2 class="text-decoration-underline">Automated Testing</h2>
+      </div>
+      <br>
       <div id="testing-uat">
         <h2 class="text-decoration-underline">User Acceptance Testing</h2>
         <p class="text-container">
           To test the functionalities of our projects, namely the survey tool and the dashboard, as well as weighing them up to the requirements, we conducted a User Acceptance 
-          Testing (UAT) [1]. This allowed us to see whether the requirements we set were met as well as gaining feedback for potential 
+          Testing (UAT). This allowed us to see whether the requirements we set were met as well as gaining feedback for potential 
           areas of improvement.
         </p>
         <h5 class="text-decoration-underline text-container">Testers</h5>
@@ -124,8 +197,8 @@
           </div>
           <div class="col-md-4 text-container">
             <h6 class="text-decoration-underline">Tester 4</h6>
-            <p>20 year old, Singaporean student at UCL</p>
-            <p>Currently studying abroad and living life as a regular university student.</p>
+            <p>30 year old, Teacher residing in the netherlands</p>
+            <p>Secondary school teacher.</p>
           </div>
         </div>
         <h5 class="text-decoration-underline text-container">Test Cases</h5>
@@ -133,7 +206,7 @@
           We created a set of test cases to evaluate the functionalities of the survey tool and the dashboard. The test cases were 
           designed to cover all the requirements we set in the requirements table. This included a intuitive survey tool, the dashboard 
           for analysing and viewing the data, ease of use as well as other factors such as performance and reliability. We then asked 
-          users to rate each acceptance requirements to the Likert Scale [2] as well as leave feedbacks and comments about each section.
+          users to rate each acceptance requirements to the Likert Scale as well as leave feedbacks and comments about each section.
         </p>
         <h5 class="text-decoration-underline text-container">Feedback</h5>
         <table class="table">
@@ -270,14 +343,6 @@
         </table>
       </div>
       <br>
-      <br>
-      <br>
-      <div class="text-container">
-        <h5>References:</h5>
-        <p>[1] E. Elazar, “What is User Acceptance Testing (UAT) - The Full Process Explained,” Panaya, Apr. 23, 2018. Available: https://www.panaya.com/blog/testing/what-is-uat-testing/</p>
-        <p>[2] R. Likert, “A technique for the measurement of attitudes.,” psycnet.apa.org, 1932. Available: https://psycnet.apa.org/record/1933-01885-001</p>
-      </div>
-      <br>
     </div>
     
   </main>
@@ -309,17 +374,17 @@
               <li><i class="bx bx-chevron-right"></i> <a href="requirements.html">Requirements</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="research.html">Research</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="UIdesign.html">UI Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/design.html"> System Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="design.html"> System Design</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
             <h4></h4>
             <br>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/implementation.html">Implementation</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/testing.html">Testing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/evaluation.html">Evaluation</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/appendices.html">Appendices</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="implementation.html">Implementation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="testing.html">Testing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="evaluation.html">Evaluation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="appendices.html">Appendices</a></li>
             </ul>
           </div>
 
