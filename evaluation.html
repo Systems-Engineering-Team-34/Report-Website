@@ -399,7 +399,7 @@
                         to look at the project from the user's perspective and ensure that the user experience is as smooth as possible.
                       </p>
                       <p>
-                        The survey bot was designed to be as simple as possible and ensured that it was easy to respond to the questions. This 
+                        The survey bot was designed to be as simple as possible and we ensured that it was easy to respond to the questions. This 
                         was done by using buttons as options, allowing for quick responses. Furthermore, for answers that the users type, we 
                         implemented functionalities that would allow the bot to match the best possible answer that matches the user's input.
                       </p>
@@ -438,8 +438,9 @@
                         and data points.
                       </p>
                       <p>
-                        However, one of the current issues is that our microsoft azure has a limited number of credits, meaning that 
-                        some requests made to the server, especially the database, resulted in either a slow response or no response at all 
+                        However, one of the current issues is that our microsoft azure account (from which we were hosting the database) has a limited 
+                        number of credits, meaning that we had to be conservative when confiruing the settings for our database. For example, to save having to 
+                        run the database 24/7 we set the auto-pause delay to 1 hour. As a result, some requests made to the database, resulted in a slow response
                         due to it being offline.
                       </p>
                     </div>
@@ -449,9 +450,11 @@
                       <h4>Efficiency</h4>
                       <p>
                         One of the main goals of RedCrossConnect was to ensure that the system was efficient and could handle large amounts of data 
-                        and users. We managed to achieve this by ensuring that the system was scalable and could support a growing number of users through 
-                        using tools such as Twilio and WhatsApp. However, the bottleneck is definately through the database and azure as the limited 
-                        number of credits meant that the system was not as efficient as we would have liked.
+                        and users. We managed to achieve this by ensuring that the system was scalable and could support a growing number of users. For example, 
+                        we chose to host our database on Azure as it has flexible pricing and serving tiers, meaning that we can seamlessly adjust resources and 
+                        capacities according to the evolving demands of our user base, ensuring consistent performance and availability as our platform continues to 
+                        grow. Moreover, our adherence to normalization principles and the utilization of a relational database model ensured efficiency by 
+                        eliminating data redundancy and optimizing storage and retrieval processes.
                       </p>
                     </div>
                   </div>
@@ -471,9 +474,10 @@
                     <div class="text-container">
                       <h4>Maintainability</h4>
                       <p>
-                        Our project is well maintained as each part of the code is kept in well organised folders. For example, the front end code is kept 
-                        in one folder and the survey bot code is kept in another. This allows for easy maintenance and debugging of the code. Furthermore, the API 
-                        that we used was well documented, allowing for easy maintenance and debugging of the code.
+                        Our project is well maintained as each part of the code is kept in well-organized folders. Our seperate components also come with a README 
+                        file, which makes clear its purpose and how you can use it. We could have used more comments in our code, however, to make it more 
+                        understandable. Additionally, we prioritize regular code reviews and version control practices to ensure the project remains easily 
+                        manageable and adaptable to future changes.
                       </p>
                       <p>
                         All of our code are kept in a GitHub organisation.
@@ -484,11 +488,13 @@
                     <div class="text-container">
                       <h4>Project Management</h4>
                       <p>
-                        The project management of RedCrossConnect was well managed. In the beginning, we allocated specific features to be implemented 
-                        by each team member (front end, survey bot and backend / database). This allowed for each team member to focus on their specific 
-                        task and ensure that the project was completed on time. Furthermore, we used tools such as GitHub to manage the project. Furthermore, 
-                        we held weekly meetings with our clients to ensure that the project was on track and that the clients were happy with the progress. 
-                        Lastly, we had a WhatsApp groupchat to allow us as team members to communicate to each efficiently, ensuring the project was on track.
+                        At the start of our project, we divided it into three main parts: front-end development, survey bot creation, and back-end/database 
+                        development. Team members chose tasks in the area they knew best and felt most comfortable with, which helped us work more efficiently. 
+                        We used GitHub to manage our work smoothly. Kanban boards were very helpful in showing us where we were with the project and what we 
+                        needed to do next. For the technical setup, we had our back-end API on Azure, and we used an Azure Pipeline connected to our GitHub.
+                        This setup meant that every time we made changes and pushed them to GitHub, the system would automatically build and deploy those changes. 
+                        We kept our client in the loop with weekly meetings, ensuring they were happy with how the project was going. Also, we used a WhatsApp group 
+                        for quick and easy communication within our team.
                       </p>
                     </div>
                   </div>
@@ -505,8 +511,8 @@
         <div class="text-container">
           <p>With a limited timeframe for our project, we had many more ideas for features to be implemented. Some of these include:</p>
           <p>
-            1. For the survey, we could have implemented a feature that allows for more than one user per device and allow for user profiles 
-            to be saved on the device. This would allow for multiple users to use the same device to respond to the survey.
+            1. For the survey, we could have implemented a feature that allows for multiple people to answer the survey from the same device but under a 
+            different user profile. This would be particularly useful in communities where not everyone would have a mobile phone.           
           </p>
           <p>
             2. For the dashboard, we could have implemented a feature that allows for the dashboard to be customised according to the user's 
@@ -525,9 +531,13 @@
             5. Notification system: we could have implemented a notification system that alerts users of new surveys, significant data updates, or urgent news.
           </p>
           <p>
-            6. Currently, the only way of adding more surveys or questions to the survey is through Twilio or editing the database directly. In 
+            6. Currently, the only way of adding more surveys or questions to the survey is through Twilio and querying the database directly. In 
             the future, it would be nice to implement a user interface or a feature on the dashboard that allows IFRC members to add more surveys 
-            or edit and add more questions to the survey.
+            or edit existing surveys (e.g. adding questions to the survey, changing the survey title etc...).
+          </p>
+          <p>
+            7. Eliminating the userstate table from the database would alleviate the storage of redundant data. Instead, the survey bot could directly query 
+            the database to ascertain the last question answered by the user, thereby bypassing the need for user state reliance.
           </p>
         </div>
       </div>
