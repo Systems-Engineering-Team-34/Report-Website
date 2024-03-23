@@ -187,17 +187,16 @@
       <div id="design-data-storage">
         <h2 class="text-decoration-underline">Data Storage (ER Diagram)</h2>
         <p class="text-container">
-          Our project leverages a MySQL database to securely store and manage survey data, ensuring the integrity and accessibility of 
-          the information collected. MySQL is a popular open-source relational database management system known for its reliability, 
-          performance, and scalability, making it an ideal choice for our data storage needs. The database schema is designed to 
-          accommodate the various data points collected during the survey process, enabling efficient querying and analysis of the 
-          information gathered. By utilizing MySQL as our data storage solution, we can ensure that the survey data is securely stored 
-          and readily available for processing and visualization, supporting the IFRC in their mission to respond to the needs of 
-          vulnerable communities around the world.
+          Our project leverages a MySQL database to securely store and manage survey data, ensuring the integrity and accessibility of the information collected. Moreover, The database schema was designed to accommodate the various data points collected during the survey process, enabling efficient querying and analysis of the information gathered. 
         </p>
         <p class="text-container">
-          The ER diagram below illustrates the structure of our MySQL database, highlighting the relationships between different tables 
-          and the attributes stored within each table.
+          The entity-relationship diagram below maps out the structure of our database designed for conducting and managing surveys, their questions, and user responses. At the center of this scheme is the survey entity which holds details about each survey, connecting to key tables such as the question and questionOption tables.
+        </p>
+        <p class="text-container">
+          The relationship between Person, Community, and Country in our database is straightforward but essential. Each person in the database is linked to a community, and each community is located in a country. This setup helps us understand and analyze the survey data based on the geographics and demographics information, which is really helpful for the IFRC when planning strategies to help different communities around the world
+        </p>
+        <p class="text-container">
+          At the end of our process, we have the Response part of the database. This is where we keep track of every answer that people give to the survey questions. This entity essentially is the key in allowing us to make queries and display vital information on the dashboard.
         </p>
         <img src="assets/img/systemdesign/database-er-diagram.png" alt="DataStorage" width="95%" data-aos="fade-up">
       </div>
